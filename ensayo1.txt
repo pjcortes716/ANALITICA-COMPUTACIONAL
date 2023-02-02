@@ -13,12 +13,3 @@ if __name__ == "__main__":
     with Pool() as pool:
       result = pool.map(cube, range(10,N))
     finish_time = time.perf_counter()
-    print("Program finished in {} seconds - using multiprocessing".format(finish_time-start_time))
-    print("---")
-    # second way, serial computation
-    start_time = time.perf_counter()
-    result = []
-    for x in range(10,N):
-      result.append(cube(x))
-    finish_time = time.perf_counter()
-    print("Program finished in {} seconds".format(finish_time-start_time))

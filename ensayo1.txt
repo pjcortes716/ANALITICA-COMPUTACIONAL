@@ -9,7 +9,4 @@ def cube(x):
 
 if __name__ == "__main__":
     # first way, using multiprocessing
-    start_time = time.perf_counter()
-    with Pool() as pool:
-      result = pool.map(cube, range(10,N))
-    finish_time = time.perf_counter()
+    start_tim
